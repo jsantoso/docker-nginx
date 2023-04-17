@@ -44,6 +44,6 @@
   fi
 
   # FPM_HOST env injection - allowing us to set host dynamically on start
-  envsubst '${WEB_DIR},${FPM_HOST},${FPM_HOST_2},${FPM_HOST_3}' < /etc/default-fpm.conf > /etc/nginx/conf.d/default.conf
+  envsubst '${WEB_DIR},${FPM_HOST},${FPM_HOST_2},${FPM_HOST_3},${FPM_HOST_4},${FPM_HOST_5},${FPM_HOST_6},${FPM_HOST_7},${FPM_HOST_8},${FPM_HOST_9}' < /etc/default-fpm.conf > /etc/nginx/conf.d/default.conf
 
   nginx -g 'daemon off;'
