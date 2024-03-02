@@ -6,6 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=UTC
 
 RUN apt-get update
+RUN apt-get upgrade -y
+ADD conf/nginx.conf /etc/nginx/nginx.conf
 ADD conf/default-fpm.conf /etc/default-fpm.conf
 
 # Path here has to match fpm pathing: mount volumes to /var/www/html
