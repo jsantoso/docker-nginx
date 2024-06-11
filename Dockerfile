@@ -5,8 +5,7 @@ LABEL maintainer="Jeffrey Santoso <jeffrey.k.santoso@gmail.com>"
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=UTC
 
-RUN apt-get update
-RUN apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y
 ADD conf/nginx.conf /etc/nginx/nginx.conf
 ADD conf/default-fpm.conf /etc/default-fpm.conf
 
